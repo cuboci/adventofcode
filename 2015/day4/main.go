@@ -20,7 +20,7 @@ func main() {
 }
 
 func mine(input string, prefLen int) int {
-	prefix := fmt.Sprintf(fmt.Sprintf("%%0%ds", prefLen), "")
+	prefix := strings.Repeat("0", prefLen)
 	hash := md5.New()
 	for i := 1; ; i++ {
 		hash.Reset()
